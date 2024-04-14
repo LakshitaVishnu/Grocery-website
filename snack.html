@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "groc.css">
+    <title>Document</title>
+
+</head>
+<body onload="changeImage()">
+    <div id = "container">
+        <a href = home.html><img id ="logo" src="logo.png"></a>
+        <a href = "cart.html"><img id = "img1" src = "cart.png"></a>
+        <a href = "login.html"><img id = "log" src = "login.png"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>|
+                <li><a href="about.html">About Us</a></li>|
+                <li><a>Categories</a>
+                    <ul>
+                        <li><a href = "fruits.html">Fresh Fruits</a></li>
+                        <li><a href = "veggies.html">Vegetabels</a></li>
+                        <li><a href = "dairy.html">Dairy Products</a></li>
+                        <li><a href = "snack.html">Snacks</a></li>
+                        <li><a href = "bath.html">Bath Essentials</a></li>
+                        <li><a href = "juices.html">Healthy Juices</a></li>
+                    </ul>
+                </li>|
+                <li>
+                    <a href="#">Contacts</a>
+                    <ul>
+                        <li><a href="#">+91 9971963497</a></li>
+                        <li><a href="#">+91 8148279749</a></li>
+                        <li><a href="#">bb.query@gmail.com</a></li>
+                    </ul>
+                </li>|  
+
+            </ul>
+        </nav>
+
+    </div>
+    <div class="row1" style="display: flex; justify-content: space-between;">
+        <div class="column">
+            <figure>
+                <img class="fruits" src="muesli.webp"><br><br><br>
+                <br>
+                <figcaption>Kellog's Muesli<br>(Rs.357-750g)
+                    <button onclick="showPopup('Kellogs Muesli added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="chocos.webp"><br><br><br>
+                <figcaption>Kellogg's Chocos Moons and Stars    (Rs.352-1.2kg)
+                    <button onclick="showPopup('Kelloggs Chocos added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="yoga bar.webp"><br><br><br>
+                <figcaption>Multigrain Energy Bar      (Rs.376-380g)
+                    <button onclick="showPopup('Multigrain Energy Bar added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="maggie.webp"><br><br><br>
+                <figcaption>Veggie Masala Maggie   (Rs.52-248g)
+                    <button onclick="showPopup('Veggie Masala Maggie added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="row2" style="display: flex; justify-content: space-between;">
+        <div class="column">
+            <figure>
+                <img class="fruits" src="hide.webp"><br><br><br>
+                <figcaption>Hide & Seek Multipack (Pack of 2)  (Rs.91.2-2x200g)
+                    <button onclick="showPopup('Hide & Seek added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="digestive.webp"><br><br><br>
+                <figcaption>NutriChoice Digestive Biscuit    (Rs.59.8-250g)
+                    <button onclick="showPopup('Digestive Biscuit added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="pringles.webp"><br><br><br>
+                <figcaption>Pringles Classic Salted Flavoured   (Rs.203.11-2x107g)
+                    <button onclick="showPopup('Pringles Potato Chips added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="ketchup.webp"><br><br><br>
+                <figcaption>Kissan Fresh Tomato Ketchup   (Rs.14.1-90g)
+                    <button onclick="showPopup('Kissan Ketchup added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="popup">
+        <p class="message"></p>
+    </div>
+
+    <style>
+        .popup {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup .message {
+            color: rgb(1, 21, 1);
+            background-color: #34e540;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        function showPopup(message) {
+            const popup = document.querySelector('.popup');
+            const messageElement = popup.querySelector('.message');
+            messageElement.textContent = message;
+            popup.style.display = 'flex';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

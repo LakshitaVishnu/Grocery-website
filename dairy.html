@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "groc.css">
+    <title>Document</title>
+
+</head>
+<body onload="changeImage()">
+    <div id = "container">
+        <a href = home.html><img id ="logo" src="logo.png"></a>
+        <a href = "cart.html"><img id = "img1" src = "cart.png"></a>
+        <a href = "login.html"><img id = "log" src = "login.png"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>|
+                <li><a href="about.html">About Us</a></li>|
+                <li><a>Categories</a>
+                    <ul>
+                        <li><a href = "fruits.html">Fresh Fruits</a></li>
+                        <li><a href = "veggies.html">Vegetabels</a></li>
+                        <li><a href = "dairy.html">Dairy Products</a></li>
+                        <li><a href = "snack.html">Snacks</a></li>
+                        <li><a href = "bath.html">Bath Essentials</a></li>
+                        <li><a href = "juices.html">Healthy Juices</a></li>
+                    </ul>
+                </li>|
+                <li>
+                    <a href="#">Contacts</a>
+                    <ul>
+                        <li><a href="#">+91 9971963497</a></li>
+                        <li><a href="#">+91 8148279749</a></li>
+                        <li><a href="#">bb.query@gmail.com</a></li>
+                    </ul>
+                </li>|  
+
+            </ul>
+        </nav>
+
+    </div>
+    <br><br><br><br>
+    <div class="row1" style="display: flex; justify-content: space-between;">
+        <div class="column">
+            <figure>
+                <img class="fruits" src="amul.webp"><br><br>
+                <br>
+                <figcaption>Amul Butter-Tub<br>(Rs.140-200g)
+                    <button onclick="showPopup('Amul Butter-Tub added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="milk.webp"><br><br>
+                <figcaption>Amul Toned Milk    (Rs.15-200ml)
+                    <button onclick="showPopup('Amul Toned Milk added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="cheese.png"><br><br>
+                <figcaption>Amul Cheese Slice      (Rs.266-400g)
+                    <button onclick="showPopup('Amul Cheese Slice added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="ghee.webp"><br><br>
+                <figcaption>Gowardhan Desi Ghee    (Rs.168-200ml)
+                    <button onclick="showPopup('Gowardhan Desi Ghee added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="row2" style="display: flex; justify-content: space-between;">
+        <div class="column">
+            <figure>
+                <img class="fruits" src="curd.webp"><br><br>
+                <figcaption>Mother Dairy Curd      (Rs.28-200g)
+                    <button onclick="showPopup('Mother Dairy Curd added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="pan.webp"><br><br>
+                <figcaption>Mother Dairy Paneer     (Rs.90-200g)
+                    <button onclick="showPopup('Mother Dairy Paneer added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="manyoghurt.webp"><br><br>
+                <figcaption>Milky Mist Mango Yoghurt   (Rs.24-100g)
+                    <button onclick="showPopup('Milky Mist Mango Yoghurt added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="lassi.webp"><br><br>
+                <figcaption>Amul Lassi     (Rs.75-3x250ml)
+                    <button onclick="showPopup('Amul Lassi added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="popup">
+        <p class="message"></p>
+    </div>
+
+    <style>
+        .popup {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup .message {
+            color: rgb(1, 21, 1);
+            background-color: #34e540;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        function showPopup(message) {
+            const popup = document.querySelector('.popup');
+            const messageElement = popup.querySelector('.message');
+            messageElement.textContent = message;
+            popup.style.display = 'flex';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "groc.css">
+    <title>Document</title>
+    <script type="text/javascript">
+        var images = ["juice1.webp","juice2.webp"]; 
+        var x = 0; 
+
+        function changeImage() {
+            var img = document.getElementById("img2");
+            img.src = images[x];
+            x++;
+
+            if (x >= images.length) {
+                x = 0;
+            }
+        }
+
+        var timerId = setInterval(changeImage, 2300);
+    </script>
+
+</head>
+<body  onload="changeImage()">
+    <div id = "container">
+        <a href = home.html><img id ="logo" src="logo.png"></a>
+        <a href = "cart.html"><img id = "img1" src = "cart.png"></a>
+        <a href = "login.html"><img id = "log" src = "login.png"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a>Categories</a>
+                    <ul>
+                        <li><a href = "fruits.html">Fresh Fruits</a></li>
+                        <li><a href = "veggies.html">Vegetabels</a></li>
+                        <li><a href = "dairy.html">Dairy Products</a></li>
+                        <li><a href = "snack.html">Snacks</a></li>
+                        <li><a href = "bath.html">Bath Essentials</a></li>
+                        <li><a href = "juices.html">Healthy Juices</a></li>
+                    </ul>
+                </li>|
+                <li>
+                    <a href="#">Contacts</a>
+                    <ul>
+                        <li><a href="#">+91 9971963497</a></li>
+                        <li><a href="#">+91 8148279749</a></li>
+                        <li><a href="#">bb.query@gmail.com</a></li>
+                    </ul>
+                </li>
+                
+
+            </ul>
+        </nav>
+
+        
+    </div>
+    <br><br><br><br><br>
+    <div id="move">
+        <a href = "juices.html"><img id="img2" src="default-image.jpg" alt="Image"></a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="row1" style="display: flex; justify-content: space-between;">
+        <div class="column">
+            <figure>
+                <img class="fruits" src="apple_juice.png"><br><br>
+                <figcaption>Apple Juice (Rs.30)<br>
+                    <button>Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="litchi.webp"><br><br>
+                <figcaption>Tropicana Fruit Juice (Rs.246)
+                    <button>Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="or.webp"><br><br>
+                <figcaption>Cold Extracted Juice - Valencia Orange(Rs.315)
+                    <button>Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="guava.webp"><br><br>
+                <figcaption>Grapes(Rs.150/kg)
+                    <button>Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="row2" style="display: flex; justify-content: space-between;">
+        <div class="column">
+            <figure>
+                <img class="fruits" src="pom.webp"><br><br>
+                <figcaption>Cold Pressed Pomegranate Juice (Rs.109)
+                    <button>Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="jal.webp"><br><br>
+                <figcaption>Paper Boat Jaljeera, 6x200 ml Multipack (Rs.189)
+                    <button>Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="suga.webp"><br><br>
+                <figcaption> Cold Extracted Juice - Sugarcane (Rs.144)
+                    <button>Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="coco.webp"><br><br>
+                <figcaption>Refreshing  Coconut Water (Rs.100)
+                    <button>Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+      
+</body>
+</html>

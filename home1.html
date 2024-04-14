@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="groc1.css">
+    
+    <title>HTML</title>
+    <script type="text/javascript">
+        var images = ["fruits.png", "veg.png", "bath.png", "snacks.png", "juice.png"]; 
+        var x = 0; 
+
+        function changeImage() {
+            var img = document.getElementById("img2");
+            img.src = images[x];
+            x++;
+
+            if (x >= images.length) {
+                x = 0;
+            }
+        }
+
+        var timerId = setInterval(changeImage, 2300);
+    </script>
+</head>
+<body onload="changeImage()">
+    <div id="container">
+        <img src="logo.png">
+        <a href="cart.html"><img id="img1" src="cart.png"></a>
+        <a href="login.html"><img id="log" src="login.png"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>|
+                <li><a href="about.html">About Us</a></li>|
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="fruits.html">Fresh Fruits</a></li>
+                        <li><a href="veggies.html">Vegetables</a></li>
+                        <li><a href="dairy.html">Dairy Products</a></li>
+                        <li><a href="snack.html">Snacks</a></li>
+                        <li><a href="bath.html">Bath Essentials</a></li>
+                        <li><a href="juices.html">Healthy Juices</a></li>
+                    </ul>
+                </li>|
+                <li>
+                    <a href="#">Contacts</a>
+                    <ul>
+                        <li><a href="#">+91 9971963497</a></li>
+                        <li><a href="#">+91 8148279749</a></li>
+                        <li><a href="#">bb.query@gmail.com</a></li>
+                    </ul>
+                </li>|  
+            </ul>
+        </nav>
+    </div>
+    <br><br><br><br><br><br>
+    
+    <div id="move">
+        <img id="img2" src="default-image.jpg" alt="Image">
+    </div>
+    <br><br><br><br>
+        /
+    <div class="info">
+        <div class="info1">
+            <figure class = "infofig">
+            <img class="infoimg" src="shipping.png">
+            <figcaption class = "infocap">Fast Shippin<br>Free shipping for all Vellore orders.</figcaption>
+            </figure>
+        </div>
+        <div class="info1">
+            <img class="infoimg" src="support.png">
+        </div>
+        <div class="info1">
+            <img class="infoimg" src="cashback.png">
+        </div>
+        <div class="info1">
+            <img class="infoimg" src="secure.png">
+        </div>
+    </div>
+
+    <footer>
+        Copyright &copy; 2023 grocerygrid
+    </footer>
+</body>
+</html>

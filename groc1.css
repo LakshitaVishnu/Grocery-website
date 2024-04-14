@@ -1,0 +1,215 @@
+body{
+    background-color: #ccd5ae;
+}
+
+#a1{
+    color: #ccd5ae;
+    padding : 20px;
+    text-decoration: none;
+}
+
+img{
+    width:150px;
+    height: 50px;
+    border-radius: 20px;
+}
+
+  
+#container {
+    background-color: #ccd5ae;
+    position: fixed;
+    width: 100%;
+    top:0px;
+    z-index:1000;
+}
+#img1{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 50px;
+    height: 40px;
+}
+
+#move{
+    position: absolute;
+    left:200px;
+}
+
+#log{
+    position: absolute;
+    top: 5px;
+    right: 80px;
+    width: 40px;
+    height: 40px;
+}
+
+#img2{
+    width:80%;
+    height:50%;
+}
+
+
+.navbar {
+    background-color: #ccd5ae;
+    position: relative;
+    z-index: 999;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+background: #13501e;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color: #ccd5ae;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Style the dropdown menu */
+.navbar ul ul {
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+
+.navbar ul ul li {
+    display: block;
+}
+
+.navbar li:hover ul {
+    display: block;
+}
+
+/* Change the background color of dropdown links on hover */
+.navbar ul ul li a:hover {
+    background-color: #3a5a40;
+    color: #ccd5ae;
+}
+
+#content-aboutUs {
+    padding: 20px; /* Add padding to separate content from the header */
+    margin-top: 100px; /* Adjusted margin-top to avoid overlapping with the fixed header */
+    text-align: justify;
+}
+
+#about{
+    width :100%;
+    height: auto;
+}
+
+#p1{
+    color: green;
+}
+
+h2{
+    color: #0b631b;
+}
+
+#fruits-row1{
+    
+    
+    gap: 500px;
+
+}
+.fruits{
+    height:200px;
+    width:200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+button{
+    background-color: #13501e;
+    color: #ccd5ae;
+    font-size:medium;
+    width: 100px;
+    height:40px;
+    border-radius:15px;
+    font-family:'Times New Roman', Times, serif;
+    margin-right: 0px;
+    white-space: nowrap;
+}
+figcaption{
+    font-color;
+    font-size:small;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+figure{
+    background-color: whitesmoke;
+    padding:20px;
+    border-radius: 15px;
+    height: 300px;
+    width: 200px;
+}
+
+#move {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.row1, .row2 {
+   margin-top: 80px; 
+}
+
+
+
+body {
+    position: relative; 
+    min-height: 100vh; 
+    margin: 0;
+    padding-bottom: 50px; 
+}
+
+footer {
+    position: absolute;
+    width: 100%; 
+    background-color: #13501e; 
+    color: #fff; 
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 200px;
+}
+
+.info{
+    display: flex;
+    margin-top: 600px;
+    justify-content: center;
+    gap:100px;
+    justify-content: space-between;
+}
+
+.infoimg{
+    width:15vw;
+    height:15vh;
+
+}
+
+.infofig{
+    background-color: #ccd5ae;
+    padding:20px;
+    border-radius: 15px;
+    height: 200px;
+    width: 100px;
+    justify-content: center;
+}
+
+.infocap{
+    font-size:medium;
+    font-weight: 200;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center; 
+} 

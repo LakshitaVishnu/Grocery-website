@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="groc.css">
+    
+    <title>HTML</title>
+    <script type="text/javascript">
+        var images = ["fruits.png", "veg.png", "bath.png", "snacks.png", "juice.png"]; 
+        var x = 0; 
+
+        function changeImage() {
+            var img = document.getElementById("img2");
+            img.src = images[x];
+            x++;
+
+            if (x >= images.length) {
+                x = 0;
+            }
+        }
+
+        var timerId = setInterval(changeImage, 2300);
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body onload="changeImage()">
+    <div id="container">
+        <a href = home.html><img id = "logo" src="logo.png"></a>
+        <a href="cart.html"><img id="img1" src="cart.png"></a>
+        <a href="login.html"><img id="log" src="login.png"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="fruits.html">Fresh Fruits</a></li>
+                        <li><a href="veggies.html">Vegetables</a></li>
+                        <li><a href="dairy.html">Dairy Products</a></li>
+                        <li><a href="snack.html">Snacks</a></li>
+                        <li><a href="bath.html">Bath Essentials</a></li>
+                        <li><a href="juices.html">Healthy Juices</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Contacts</a>
+                    <ul>
+                        <li><a href="#">+91 9971963497</a></li>
+                        <li><a href="#">+91 8148279749</a></li>
+                        <li><a href="#">gg.query@gmail.com</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <br>
+    
+    <div id="move">
+        <img id="img2" src="default-image.jpg" alt="Image">
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <div class="info">
+        <div class="info1">
+            <figure class="infofig">
+                <img class="infoimg" src="shipping.png">
+                <figcaption class="infocap">
+                    Delivery<br><br>Fast and reliable worldwide delivery in less than 30 mins
+                </figcaption>
+            </figure>
+        </div>
+        <div class="info1">
+            <figure class="infofig">
+                <img class="infoimg" src="support.png">
+                <figcaption class="infocap">
+                    24/7 Support<br><br>Our dedicated team is available round the clock to assist you.
+                </figcaption>
+            </figure>
+            
+        </div>
+        <div class="info1">
+            <figure class="infofig">
+                <img class="infoimg" src="cashback.png">
+                <figcaption class="infocap">
+                    100% Cashback<br><br>Earn rewards with every purchase through our cashback program.
+                </figcaption>
+            </figure>
+        </div>
+        <div class="info1">
+            <figure class="infofig">
+                <img class="infoimg" src="secure.png">
+                <figcaption class="infocap">
+                    Secure Payments<br><br>Your transactions are safeguarded with state-of-the-art encryption technology.
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container1">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email: gg.query@gmail.com</p>
+                <p>Phone: +91 9971963497</p>
+                <p>Address: Vellore,katpadi</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Categories</a></li>
+                    <li><a href="">Contacts</a></li>
+                    
+                </ul>
+            </div>
+            
+
+        </div>
+        <div class="bottom-bar">
+           <p>Copyright &copy; 2023 grocerygrid.All rights reserved</p> 
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "groc.css">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var images = ["fruit1.jpg"]; 
+        var x = 0; 
+
+        function changeImage() {
+            var img = document.getElementById("img2");
+            img.src = images[x];
+            x++;
+
+            if (x >= images.length) {
+                x = 0;
+            }
+        }
+
+        var timerId = setInterval(changeImage, 2300);
+    </script>
+
+</head>
+<body onload="changeImage()">
+    <div id = "container">
+        <a href = home.html><img id ="logo" src="logo.png"></a>
+        <a href = "cart.html"><img id = "img1" src = "cart.png"></a>
+        <a href = "login.html"><img id = "log" src = "login.png"></a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>|
+                <li><a href="about.html">About Us</a></li>|
+                <li><a>Categories</a>
+                    <ul>
+                        <li><a href = "fruits.html">Fresh Fruits</a></li>
+                        <li><a href = "veggies.html">Vegetabels</a></li>
+                        <li><a href = "dairy.html">Dairy Products</a></li>
+                        <li><a href = "snack.html">Snacks</a></li>
+                        <li><a href = "bath.html">Bath Essentials</a></li>
+                        <li><a href = "juices.html">Healthy Juices</a></li>
+                    </ul>
+                </li>|
+                <li>
+                    <a href="#">Contacts</a>
+                    <ul>
+                        <li><a href="#">+91 9971963497</a></li>
+                        <li><a href="#">+91 8148279749</a></li>
+                        <li><a href="#">bb.query@gmail.com</a></li>
+                    </ul>
+                </li>|  
+
+            </ul>
+        </nav>
+
+    </div>
+    <br><br><br><br>
+    <div class="row1" style="display: flex; justify-content: space-between;">
+        <div class="column">
+            <figure>
+                <img class="fruits" src="body.png"><br><br>
+                <br>
+                <figcaption>Bath and Body Works Body Wash<br>(Rs.800)
+                    <button onclick="showPopup('Body wash added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="bomb.png"><br><br>
+                <figcaption>Lavender Scented Bath Bomb   (Rs.600)
+                    <button onclick="showPopup('Bath Bomb added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="soap.webp"><br><br>
+                <figcaption>Dove Pink Rosa Soap      (Rs.77/kg)
+                    <button onclick="showPopup('Dove Soap added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="shampoo.webp"><br><br>
+                <figcaption>Dove daily Shine Shampoo    (Rs.345)
+                    <button onclick="showPopup('Dove Shampoo added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="row2" style="display: flex; justify-content: space-between;">
+        <div class="column">
+            <figure>
+                <img class="fruits" src="ond.webp"><br><br>
+                <figcaption>Dove Hair Fall Rescue Conditioner      (Rs.99)
+                    <button onclick="showPopup('Dove Conditioner added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="lotion.png"><br><br>
+                <figcaption>Bath and Body Works Lotion    (Rs.900)
+                    <button onclick="showPopup('Body Lotion added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="mist.png"><br><br>
+                <figcaption>Bath and Body Works BodyMist    (Rs.699)
+                    <button onclick="showPopup('Dream Night Bodymist added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="column">
+            <figure>
+                <img class="fruits" src="loof.png"><br><br>
+                <figcaption>Loofah     (Rs.67)
+                    <button onclick="showPopup('Pink Loofah added to cart!')">Add to cart</button>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="popup">
+        <p class="message"></p>
+    </div>
+
+    <style>
+        .popup {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup .message {
+            color: rgb(1, 21, 1);
+            background-color: #34e540;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        function showPopup(message) {
+            const popup = document.querySelector('.popup');
+            const messageElement = popup.querySelector('.message');
+            messageElement.textContent = message;
+            popup.style.display = 'flex';
+            setTimeout(() => {
+                popup.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
