@@ -48,11 +48,6 @@
                 popup.style.display = 'none';
             }, 2000);
         }
-
-        function forgotPassword() {
-            // Show popup for forgot password
-            showPopup('Forgot password link has been sent to your email.');
-        }
     </script>
 </head>
 <body>
@@ -81,7 +76,7 @@
             <a href="home.html"><img src="logo.png" alt="Logo" class="logo" width="300px" height="100px"></a>
             <h2>Welcome</h2>
             <p>Sign in to continue</p>
-            <form action="#" method="post" onsubmit="return validateForm()">
+            <form action="#" method="post" onsubmit="return validateForm(event)">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
 
@@ -90,7 +85,7 @@
 
                 <button type="submit">Sign In</button>
             </form>
-            <p class="forgot-password"><a href="#" style="color: #13501e;" onclick="forgotPassword()">Forgot your password?</a></p>
+            <p class="forgot-password"><a href="#" style="color: #13501e;" onclick="showPopup('Sent a email!')">Forgot your password?</a></p>
         </div>
     </div>
 
